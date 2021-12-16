@@ -25,7 +25,7 @@ public class RestApiController {
         return service.getCarts();
     }
 
-    @GetMapping("/products/{id]")
+    @GetMapping("/products/{id}")
     public ItemDto getItem(@PathVariable("id") UUID id) {
         return service.getItem(id);
     }
