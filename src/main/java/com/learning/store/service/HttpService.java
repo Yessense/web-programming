@@ -1,7 +1,6 @@
 package com.learning.store.service;
 
-import com.learning.store.dto.CartDto;
-import com.learning.store.dto.ItemDto;
+import com.learning.store.dto.*;
 
 import java.util.List;
 import java.util.UUID;
@@ -17,7 +16,7 @@ public interface HttpService {
     public CartDto getCart(UUID id);
 
     // Post methods
-    public void createItem();
+    public void createItem(CreateItemRequest request);
 
     public CartDto createCart();
 
@@ -27,9 +26,9 @@ public interface HttpService {
     public void deleteCart(UUID id);
 
     // Put methods
-    public void updateItem();
+    public void updateItem(UpdateItemRequest request);
 
-    public void addCartItem();
+    public void addCartItem(UUID cartId, AddCartItemRequest request);
 
-    public void removeCartItem();
+    public void removeCartItem(UUID cartId, RemoveCartItemRequest request);
 }

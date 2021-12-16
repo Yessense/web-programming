@@ -1,7 +1,6 @@
 package com.learning.store.controller;
 
-import com.learning.store.dto.CartDto;
-import com.learning.store.dto.ItemDto;
+import com.learning.store.dto.*;
 import com.learning.store.service.HttpService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
@@ -38,8 +37,8 @@ public class RestApiController {
 
     // Post methods
     @PostMapping("/products")
-    public void createItem(@RequestBody) {
-        service.createItem();
+    public void createItem(@RequestBody CreateItemRequest request) {
+        service.createItem(request);
     }
 
     @PostMapping("/baskets")
@@ -61,19 +60,19 @@ public class RestApiController {
 
     // Put methods
     @PutMapping("/products/{id}")
-    public void updateItem(@RequestBody) {
-        service.updateItem();
+    public void updateItem(@RequestBody UpdateItemRequest request) {
+        service.updateItem(request);
     }
 
-
     @PutMapping("/carts/{id}/add_item")
-    public void addCartItem(@PathVariable("id") UUID cart,
-                            @RequestBody) {
-        service.addCartItem();
+    public void addCartItem(@PathVariable("id") UUID cartId,
+                            @RequestBody AddCartItemRequest request) {
+        service.addCartItem(cartId, request);
     }
 
     @PutMapping("/carts/{id}/remove_item")
-    public void removeCartItem(@PathVariable("id") UUID cart,
-                            @RequestBody) {
-        service.removeCartItem();
+    public void removeCartItem(@PathVariable("id") UUID cartId,
+                               @RequestBody RemoveCartItemRequest request) {
+        service.removeCartItem(cartId, request);
     }
+}
