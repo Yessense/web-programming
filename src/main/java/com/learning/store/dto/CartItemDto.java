@@ -5,10 +5,14 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.UUID;
+
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class CreateItemRequest {
-    private String name;
+public class CartItemDto {
+    private UUID id;
+    private UUID cart_id;
+    private UUID item_id;
 }

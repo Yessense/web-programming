@@ -2,6 +2,7 @@ package com.learning.store.service.impl;
 
 
 import com.learning.store.dto.*;
+import com.learning.store.entity.Item;
 import com.learning.store.repository.CartRepository;
 import com.learning.store.repository.ItemRepository;
 import com.learning.store.service.HttpService;
@@ -72,6 +73,14 @@ public class HttpServiceImpl implements HttpService {
 
     @Override
     public void createItem(CreateItemRequest request) {
+        System.out.println("hello2");
+        log.info("Create item: {}", request);
+
+        final var resource = Item.builder()
+                .name(request.getName())
+                .id(UUID.randomUUID())
+                .build();
+        itemRepository.save(resource);
 
     }
 

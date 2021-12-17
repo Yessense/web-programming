@@ -3,6 +3,7 @@ package com.learning.store.controller;
 import com.learning.store.dto.*;
 import com.learning.store.service.HttpService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -12,6 +13,7 @@ import java.util.UUID;
 @RequiredArgsConstructor
 public class RestApiController {
 
+    @Autowired
     private HttpService service;
 
     // Get methods
@@ -38,10 +40,12 @@ public class RestApiController {
     // Post methods
     @PostMapping("/products")
     public void createItem(@RequestBody CreateItemRequest request) {
+
+//        System.out.println("Hello");
         service.createItem(request);
     }
 
-    @PostMapping("/baskets")
+    @PostMapping("/carts")
     public CartDto createCart() {
         return service.createCart();
     }

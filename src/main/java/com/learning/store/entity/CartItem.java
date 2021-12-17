@@ -5,20 +5,18 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.UUID;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import java.util.UUID;
 
-
-
-@Builder
 @Entity
-@Data
+@Table(name = "cartItem")
+@Builder
 @NoArgsConstructor
 @AllArgsConstructor
-@Table(name = "cart")
-public class Cart {
-    @Id
+@Data
+public class CartItem { @Id
     private UUID id;
+
 }
