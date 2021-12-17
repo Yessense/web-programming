@@ -1,6 +1,7 @@
 package com.learning.store.service.impl;
 
 
+import com.learning.store.controller.RestApiController;
 import com.learning.store.dto.*;
 import com.learning.store.entity.Item;
 import com.learning.store.repository.CartRepository;
@@ -10,7 +11,10 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.server.ResponseStatusException;
+import org.springframework.hateoas.Link;
+import org.springframework.hateoas.server.mvc.WebMvcLinkBuilder;
 
 import java.util.List;
 import java.util.UUID;
@@ -32,6 +36,7 @@ public class HttpServiceImpl implements HttpService {
                         .name(item.getName())
                         .id(item.getId())
                         .build()
+                        .add(WebMvcLinkBuilder.linkTo(RestApiController.class).slash("products").slash(item.getId()).withSelfRel())
                 ).collect(Collectors.toList());
     }
 

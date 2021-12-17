@@ -10,8 +10,8 @@ create table item
 --changeset yessense:v01
 create table cart
 (
-    id  uuid not null primary key
+    id uuid not null primary key
 );
 
---changeset yessense:v02 create table cart ( id  uuid not null primary key );
+
 
