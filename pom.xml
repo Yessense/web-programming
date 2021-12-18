@@ -67,9 +67,11 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
             <plugin>
-                <groupId>io.swagger</groupId>
-                <artifactId>swagger-codegen-maven-plugin</artifactId>
-                <version>2.3.1</version>
+                <groupId>org.openapitools</groupId>
+                <artifactId>openapi-generator-maven-plugin</artifactId>
+                <!-- RELEASE_VERSION -->
+                <version>5.3.0</version>
+                <!-- /RELEASE_VERSION -->
                 <executions>
                     <execution>
                         <goals>
@@ -77,10 +79,9 @@
                         </goals>
                         <configuration>
                             <inputSpec>${project.basedir}/src/main/resources/api.yaml</inputSpec>
-                            <language>java</language>
+                            <generatorName>java</generatorName>
                             <configOptions>
                                 <sourceFolder>src/gen/java/main</sourceFolder>
-                                <ta>src/gen/java/main</ta>
                             </configOptions>
                         </configuration>
                     </execution>
@@ -88,5 +89,6 @@
             </plugin>
         </plugins>
     </build>
+
 
 </project>
