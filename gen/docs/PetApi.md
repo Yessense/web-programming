@@ -1,6 +1,6 @@
 # PetApi
 
-All URIs are relative to *http://petstore.swagger.io/src*
+All URIs are relative to *http://com.learning.store/src*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -25,7 +25,7 @@ import org.openapitools.client.api.PetApi;
 public class Example {
   public static void main(String[] args) {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("http://petstore.swagger.io/src");
+    defaultClient.setBasePath("http://com.learning.store/src");
 
     PetApi apiInstance = new PetApi(defaultClient);
     Pet body = new Pet(); // Pet | Pet object that needs to be added to the store

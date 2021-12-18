@@ -3,7 +3,7 @@ swagger: "2.0"
 info:
   version: "1.0.0"
   title: "Rest api Korchemnyi"
-host: "petstore.swagger.io"
+host: "com.learning.store"
 basePath: "/src"
 schemes:
   - "http"
@@ -26,8 +26,8 @@ paths:
           description: "Invalid input"
       security:
         - petstore_auth:
-            - "write:pets"
-            - "read:pets"
+            - "write:products"
+            - "read:products"
     put:
       tags:
         - "pet"

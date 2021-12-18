@@ -1,6 +1,6 @@
 # ProductsApi
 
-All URIs are relative to *http://petstore.swagger.io/src*
+All URIs are relative to *http://com.learning.store/src*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -25,7 +25,7 @@ import org.openapitools.client.api.ProductsApi;
 public class Example {
   public static void main(String[] args) {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("http://petstore.swagger.io/src");
+    defaultClient.setBasePath("http://com.learning.store/src");
 
     ProductsApi apiInstance = new ProductsApi(defaultClient);
     try {

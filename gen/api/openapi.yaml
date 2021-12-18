@@ -3,7 +3,7 @@ info:
   title: Rest api Korchemnyi
   version: 1.0.0
 servers:
-- url: http://petstore.swagger.io/src
+- url: http://com.learning.store/src
 paths:
   /products:
     post:
@@ -14,8 +14,8 @@ paths:
           description: Invalid input
       security:
       - petstore_auth:
-        - write:pets
-        - read:pets
+        - write:products
+        - read:products
       summary: Add new product to products
       tags:
       - products
