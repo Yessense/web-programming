@@ -18,18 +18,18 @@ paths:
         - read:products
       summary: Add new product to products
       tags:
-      - products
+      - item
       x-accepts: application/json
     put:
-      operationId: updatePet
+      operationId: updateItem
       requestBody:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/Pet'
+              $ref: '#/item'
           application/xml:
             schema:
-              $ref: '#/components/schemas/Pet'
+              $ref: '#/item'
         description: Pet object that needs to be added to the store
         required: true
       responses:
@@ -44,11 +44,11 @@ paths:
           description: Validation exception
       security:
       - petstore_auth:
-        - write:pets
-        - read:pets
+        - write:items
+        - read:items
       summary: Update an existing pet
       tags:
-      - pet
+      - item
       x-codegen-request-body-name: body
       x-contentType: application/json
       x-accepts: application/json

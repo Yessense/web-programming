@@ -11,7 +11,7 @@ paths:
   /products:
     post:
       tags:
-        - "products"
+        - "item"
       summary: "Add new product to products"
       description: ""
       operationId: "additem"
@@ -30,10 +30,10 @@ paths:
             - "read:products"
     put:
       tags:
-        - "pet"
+        - "item"
       summary: "Update an existing pet"
       description: ""
-      operationId: "updatePet"
+      operationId: "updateItem"
       consumes:
         - "application/json"
         - "application/xml"
@@ -46,7 +46,7 @@ paths:
           description: "Pet object that needs to be added to the store"
           required: true
           schema:
-            $ref: "#/definitions/Pet"
+            $ref: "#/item"
       responses:
         400:
           description: "Invalid ID supplied"
@@ -56,5 +56,5 @@ paths:
           description: "Validation exception"
       security:
         - petstore_auth:
-            - "write:pets"
-            - "read:pets"
+            - "write:items"
+            - "read:items"
