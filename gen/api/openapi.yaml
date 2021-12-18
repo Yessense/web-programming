@@ -1,0 +1,58 @@
+openapi: 3.0.1
+info:
+  title: Rest api Korchemnyi
+  version: 1.0.0
+servers:
+- url: http://com.learning.store/src
+paths:
+  /products:
+    post:
+      operationId: additem
+      responses:
+        "405":
+          content: {}
+          description: Invalid input
+      security:
+      - petstore_auth:
+        - write:products
+        - read:products
+      summary: Add new product
+      tags:
+      - item
+      x-accepts: application/json
+    put:
+      operationId: updateItem
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/item'
+          application/xml:
+            schema:
+              $ref: '#/item'
+        description: Pet object that needs to be added to the store
+        required: true
+      responses:
+        "400":
+          content: {}
+          description: Invalid ID supplied
+        "404":
+          content: {}
+          description: Pet not found
+        "405":
+          content: {}
+          description: Validation exception
+      security:
+      - petstore_auth:
+        - write:items
+        - read:items
+      summary: Update product
+      tags:
+      - item
+      x-codegen-request-body-name: body
+      x-contentType: application/json
+      x-accepts: application/json
+components:
+  schemas: {}
+x-original-swagger-version: "2.0"
+
