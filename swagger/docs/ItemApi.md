@@ -4,15 +4,15 @@ All URIs are relative to *http://com.learning.store/src*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**additem**](ItemApi.md#additem) | **POST** /products | Add new product to products
-[**updateItem**](ItemApi.md#updateItem) | **PUT** /products | Update an existing pet
+[**additem**](ItemApi.md#additem) | **POST** /products | Add new product
+[**updateItem**](ItemApi.md#updateItem) | **PUT** /products | Update product
 
 
 <a name="additem"></a>
 # **additem**
 > additem()
 
-Add new product to products
+Add new product
 
 ### Example
 ```java
@@ -67,7 +67,7 @@ No authorization required
 # **updateItem**
 > updateItem(body)
 
-Update an existing pet
+Update product
 
 ### Example
 ```java

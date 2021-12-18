@@ -16,7 +16,7 @@ paths:
       - petstore_auth:
         - write:products
         - read:products
-      summary: Add new product to products
+      summary: Add new product
       tags:
       - item
       x-accepts: application/json
@@ -46,7 +46,7 @@ paths:
       - petstore_auth:
         - write:items
         - read:items
-      summary: Update an existing pet
+      summary: Update product
       tags:
       - item
       x-codegen-request-body-name: body

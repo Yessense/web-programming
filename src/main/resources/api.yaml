@@ -12,7 +12,7 @@ paths:
     post:
       tags:
         - "item"
-      summary: "Add new product to products"
+      summary: "Add new product"
       description: ""
       operationId: "additem"
       consumes:
@@ -31,7 +31,7 @@ paths:
     put:
       tags:
         - "item"
-      summary: "Update an existing pet"
+      summary: "Update product"
       description: ""
       operationId: "updateItem"
       consumes:

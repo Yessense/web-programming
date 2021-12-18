@@ -104,7 +104,7 @@ public class ItemApi {
     }
 
     /**
-     * Add new product to products
+     * Add new product
      * 
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -118,7 +118,7 @@ public class ItemApi {
     }
 
     /**
-     * Add new product to products
+     * Add new product
      * 
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -134,7 +134,7 @@ public class ItemApi {
     }
 
     /**
-     * Add new product to products (asynchronously)
+     * Add new product (asynchronously)
      * 
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
@@ -210,7 +210,7 @@ public class ItemApi {
     }
 
     /**
-     * Update an existing pet
+     * Update product
      * 
      * @param body Pet object that needs to be added to the store (required)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -227,7 +227,7 @@ public class ItemApi {
     }
 
     /**
-     * Update an existing pet
+     * Update product
      * 
      * @param body Pet object that needs to be added to the store (required)
      * @return ApiResponse&lt;Void&gt;
@@ -246,7 +246,7 @@ public class ItemApi {
     }
 
     /**
-     * Update an existing pet (asynchronously)
+     * Update product (asynchronously)
      * 
      * @param body Pet object that needs to be added to the store (required)
      * @param _callback The callback to be executed when the API call finishes
